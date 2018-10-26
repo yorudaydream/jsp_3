@@ -1,7 +1,7 @@
 package com.ft.board;
 
-public class BoardReply {
-	
+public interface BoardReply {
+
 	//reply
 	public int reply(BoardReplyDTO brdt) throws Exception;
 	

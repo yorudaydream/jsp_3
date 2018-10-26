@@ -4,9 +4,11 @@ import java.util.List;
 
 import org.omg.CORBA.PUBLIC_MEMBER;
 
+import com.ft.page.RowNumber;
+
 public interface BoardDAO {
 	//selectList
-	public List<BoardDTO> selectList(int startRow, int lastRow, String kind, String search) throws Exception;
+	public List<BoardDTO> selectList(RowNumber rowNumber) throws Exception;
 	//selectOne
 	public BoardDTO selectOne(int num) throws Exception;
 	//insert

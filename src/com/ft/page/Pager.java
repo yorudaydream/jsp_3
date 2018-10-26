@@ -7,7 +7,14 @@ public class Pager {
 	private int startNum;
 	private int lastNum;
 	private Search search;
+	private int totalPage;
 	
+	public int getTotalPage() {
+		return totalPage;
+	}
+	public void setTotalPage(int totalPage) {
+		this.totalPage = totalPage;
+	}
 	public Search getSearch() {
 		return search;
 	}
