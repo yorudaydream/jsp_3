@@ -1,3 +1,4 @@
+<%@page import="com.ft.page.Pager"%>
 <%@page import="com.ft.util.DBConnector"%>
 <%@page import="com.ft.board.BoardDTO"%>
 <%@page import="java.util.List"%>
@@ -32,6 +33,7 @@
     	MakePager mk = new MakePager(curPage, search, kind);  	
     	List<BoardDTO> ar = bd.selectList(mk.makeRow());
     	int totalCount = bd.getCount(kind, search);
+   	 	Pager pager = mk.makePage(totalCount);    
     	
 /*     	
     	request.setAttribute("list", ar);
@@ -42,7 +44,6 @@
     	view.forward(request, response);
     	 */
     	
-Pager pager =     
     	
     %>
     
@@ -74,7 +75,7 @@ Pager pager =
 			<% for(BoardDTO bdt : ar){ %>
 			<tr>
 				<td><%=bdt.getNum() %></td>
-				<td><%=bdt.getTitle() %></td>
+				<td><a href = "./noticeSelectOne.jsp?num=<%= bdt.getNum() %>"><%=bdt.getTitle() %></a></td>
 				<td><%=bdt.getWriter() %></td>
 				<td><%=bdt.getReg_date() %></td>
 				<td><%=bdt.getHit() %></td>

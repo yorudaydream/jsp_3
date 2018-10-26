@@ -40,8 +40,9 @@ public class QnaDAO implements BoardDAO, BoardReply {
 		return 0;
 	}
 
+	
 	@Override
-	public int getCount(int num) throws Exception {
+	public int getCount(String kind, String search) throws Exception {
 		// TODO Auto-generated method stub
 		return 0;
 	}

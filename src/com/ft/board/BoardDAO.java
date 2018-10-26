@@ -19,5 +19,5 @@ public interface BoardDAO {
 	public int delete(int num) throws Exception;
 	
 	//getCount
-	public int getCount(int num) throws Exception;
+	public int getCount(String kind, String search) throws Exception;
 }
