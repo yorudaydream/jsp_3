@@ -65,39 +65,6 @@ public class QnaDAO implements BoardDAO, BoardReply {
 		return 0;
 	}
 	
-	private QnaDAO qnaDAO;
-	
-	public QnaService() {
-		qnaDAO = new QnaDAO();
-	}
-	
-	public ActionForward selectList(HttpServletRequest) {
-		ActionForward actionForward = new ActionForward();
-		try {
-		
-		int curPage = 1;
-		
-		curPage = Integer.parseInt(request.));
-		
-		String kind = Request.getParameter("kind");
-		String search = Request.getParameter("search");
-		
-		MakePager mk =  new MakePager(curPage, search, kind);
-		RowNumber rowNumber = mk.makeRow();
-		
-		List<BoardDAO> ar = qnaDAO.getCount(kind, search);
-		int totalCount = qnaDAO.getCount(kind, search);
-		Pager pager = mk.makePage(totalCount);
-		
-		request.setAttribute("list",ar);
-		request.setAttribute("pager",pager);
-		
-		actionForward.setPath("");
-		
-	}catch (Exception e)	{
-		request.setAttribute("message", "Fail");
-		request.setAttribute("path", "../index.jsp");
-	}
 	
 	
 

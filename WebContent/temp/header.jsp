@@ -8,13 +8,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="<%= request.getContextPath()%>/index.jsp">Logo</a>
+      <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">Logo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<%= request.getContextPath()%>/board/noticeList.jsp">NOTICE</a></li>
-        <li><a href="<%= request.getContextPath()%>/member/memberList.jsp">MEMBER</a></li>
-        <li><a href="<%= request.getContextPath()%>/board/qnaList.jsp">QNA</a></li>
+        <li><a href="${pageContext.request.contextPath}/board/noticeList.jsp">NOTICE</a></li>
+        <li><a href="${pageContext.request.contextPath}/member/memberList.jsp">MEMBER</a></li>
+        <li><a href="${pageContext.request.contextPath}/board/qnaList.jsp">QNA</a></li>
         <li><a href="#pricing">PRICING</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>

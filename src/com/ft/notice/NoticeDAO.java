@@ -130,16 +130,15 @@ public class NoticeDAO implements BoardDAO{
 	@Override
 	public int getCount(String kind, String search) throws Exception {
 		Connection con = DBConnector.getConnect();
-		String sql = "select count(num) from notice"
-				+ "where " + kind +"like ?";
+		String sql="select count(num) from notice "
+				+ "where "+search.getKind()+" like ?";
 		
 		PreparedStatement st = con.prepareStatement(sql);
+		st.setString(1, "%"+search.getSearch()+"%");
 		
 		ResultSet rs = st.executeQuery();
-		
 		rs.next();
-		
-		int result = rs.getInt(1);
+		int result=rs.getInt(1);
 		
 		DBConnector.disConnect(rs, st, con);
 		
