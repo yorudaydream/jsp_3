@@ -12,7 +12,7 @@ import com.ft.page.MakePager;
 import com.ft.page.Pager;
 import com.ft.page.RowNumber;
 
-public class QnaService implements BoardService {
+public class QnaService implements BoardService{
 private QnaDAO qnaDAO;
 
 public QnaService() {
